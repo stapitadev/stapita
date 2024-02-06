@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from htmlbeans.com/html/muzze/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Jan 2024 13:49:53 GMT -->
+<head>
+	<!-- set the encoding of your site -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- set the page title -->
+	<title>Muzze - Museum &amp; Art Gallery Exhibition HTML Template</title>
+	<!-- inlcude google archivo & lora font cdn link -->
+	<link href="https://fonts.googleapis.com/css2?family=Archivo&amp;family=Lora&amp;display=swap" rel="stylesheet">
+	<!-- include the site bootstrap stylesheet -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		/* ---------------------------------------------------
+		.slick-slider / default
+		----------------------------------------------------- */
+		.slick-slider {
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+			touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
+
+		.slick-list:focus {
+			outline: none;
+		}
+
+		.slick-list.dragging {
+			cursor: pointer;
+			cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list {
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: block;
+		}
+
+		.slick-track:before,
+		.slick-track:after {
+			display: table;
+			content: '';
+		}
+
+		.slick-track:after {
+			clear: both;
+		}
+
+		.slick-loading .slick-track {
+			visibility: hidden;
+		}
+
+		.slick-slide {
+			display: none;
+			float: left;
+			height: 100%;
+			min-height: 1px;
+		}
+
+		[dir='rtl'] .slick-slide {
+			float: right;
+		}
+
+		.slick-slide img {
+			display: block;
+		}
+
+		.slick-slide.slick-loading img {
+			display: none;
+		}
+
+		.slick-slide.dragging img {
+			pointer-events: none;
+		}
+
+		.slick-initialized .slick-slide {
+			display: block;
+		}
+
+		.slick-loading .slick-slide {
+			visibility: hidden;
+		}
+
+		.slick-vertical .slick-slide {
+			display: block;
+			height: auto;
+			border: 1px solid transparent;
+		}
+
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
+
+		/* ---------------------------------------------------
+		.innerPagesSlider / innerPagesSlider
+		----------------------------------------------------- */
+		.innerPagesSlider .layoutBlockCol {
+			padding-left: 6%;
+			padding-right: 6%;
+		}
+
+		.innerPagesSlider .layoutBlock .imgHolder {
+			max-width: 100%;
+			box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+		}
+
+		.innerPagesSlider {
+			padding: 0 7%;
+		}
+
+		.innerPagesSlider .slick-dots {
+			margin-bottom: 0px;
+			padding-left: 0;
+			list-style-type: none;
+			display: flex;
+			justify-content: center;
+		}
+
+		.innerPagesSlider .slick-dots li {
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+
+		.innerPagesSlider .slick-dots button {
+			border-width: 0;
+			border-radius: 100%;
+			text-indent: -9999px;
+			width: 6px;
+			height: 6px;
+			padding: 0;
+			line-height: 0;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.innerPagesSlider .slick-dots button:after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background-color: rgba(35,35,35,0.4);
+			text-indent: 0;
+		}
+
+		.innerPagesSlider .slick-active button:after {
+			background-color: rgba(35,35,35,0.8);
+		}
+
+		.innerPagesSlider .slick-arrow {
+			top: 36%;
+			z-index: 1;
+			padding: 3px;
+			position: absolute;
+			border: solid #cccccc;
+			-webkit-transform: translateY(-50%) rotate(-45deg);
+			-ms-transform: translateY(-50%) rotate(-45deg);
+			transform: translateY(-50%) rotate(-45deg);
+			-webkit-transition: border-color 0.3s ease;
+			-o-transition: border-color 0.3s ease;
+			transition: border-color 0.3s ease;
+			width: 26px;
+			height: 26px;
+		}
+
+		.innerPagesSlider .slick-arrow:hover {
+			border-color: rgba(35,35,35,0.6);
+		}
+
+		.innerPagesSlider .slickNext {
+			left: 15px;
+			border-width: 3px 0 0 3px;
+		}
+
+		.innerPagesSlider .slickPrev {
+			right: 15px;
+			border-width: 0 3px 3px 0;
+		}
+
+
+		#pageWrapper {
+			overflow: hidden;
+			position: relative;
+			width: 100%;
+		}
+
+		body {
+			font: 17px/ 28px 'Archivo', sans-serif;
+			min-width: 320px;
+			color: #777777;
+		}
+
+		h1, .h1 {
+			font-size: 30px;
+			line-height: 36px;
+		}
+
+		h2, .h2 {
+			color: #25282f;
+			font-size: 26px;
+			line-height: 30px;
+		}
+
+		h3, .h3 {
+			font-size: 18px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: none;
+		}
+
+		.bgCover {
+			background-size: cover;
+			background-position: 50% 50%;
+			background-repeat: no-repeat;
+		}
+
+		.overlay:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+			opacity: 0.4;
+			background-color: #000;
+		}
+
+		.btn {
+			font-size: 18px;
+		}
+
+		.btnTheme {
+			background-color: #c1b696;
+			border-color: #c1b696;
+			color: #fff;
+		}
+
+		.btnTheme:hover {
+			color: #fff;
+			background-color: rgba(193, 182, 150, .9);
+			border-color: #c1b696;
+		}
+
+		.bgLight {
+			background-color: #f4f4f4;
+		}
+
+		/* ---------------------------------------------------
+		.bannerBlock / bannerBlock
+		----------------------------------------------------- */
+
+		.bannerBlock {
+			min-height:  600px;
+			color: #888888;
+		}
+
+		.bannerBlock .logo {
+			max-width: 72px;
+			margin: 0 auto;
+		}
+
+		.bannerBlock .btn {
+			min-width: 185px;
+			padding-top: 12px;
+			padding-bottom: 12px;
+		}
+
+		/* ---------------------------------------------------
+		.featureDemoBlock / featureDemoBlock
+		----------------------------------------------------- */
+		.HomeBlock .imgHolder {
+			max-width: 426px;
+			max-height: 426px;
+			border: 1px solid #e6e6e6;
+			margin-bottom: 25px;
+			box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+		}
+
+		.HomeBlock .imgHolder:after {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.4);
+			opacity: 0;
+			visibility: hidden;
+			transition: visibility 0.35s ease, opacity 0.35s ease;
+		}
+
+		.HomeBlock .imgHolder .btn {
+			min-width: 150px;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			font-size: 15px;
+			line-height: 17px;
+			transform: translateY(100px);
+			opacity: 0;
+			visibility: hidden;
+			transition: transform 0.35s ease, visibility 0.35s ease, opacity 0.35s ease;
+		}
+
+		.HomeBlock .imgHolder:hover:after {
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.HomeBlock .imgHolder:hover .btn {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.HomeBlock .imgHolder .btnHolder {
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 1;
+		}
+
+		.HomeBlock .h6 {
+			color: #555555;
+			margin-bottom: 0;
+		}
+
+		/* ---------------------------------------------------
+		.uniqueFeatureBlcok / uniqueFeatureBlcok
+		----------------------------------------------------- */
+		.uniqueFeatureBlcok .fullLengthBanner {
+			background-color: #c1b696;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+
+		.uniqueFeatureBlcok .fullLengthBanner .h2 {
+			font-size: 30px;
+			line-height: 36px;
+			color: #fff;
+		}
+
+		.uniqueFeatureBlcok .cImgHolder .cImgWrap {
+			width: 290px;
+			margin: 0 auto;
+		}
+
+		.uniqueFeatureBlcok .cImgHolder img {
+			box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+		}
+
+		/* ---------------------------------------------------
+		.coreFeatureBlock / coreFeatureBlock
+		----------------------------------------------------- */
+		.cfbWrap {
+			overflow: hidden;
+			transition: transform 0.35s ease;
+		}
+		.cfbWrap .icnHolder {
+			width: 68px;
+			height: 68px;
+			margin: 0 auto 18px;
+			border-radius: 26px;
+			background-color: #c1b696;
+			box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+		}
+
+		.cfbWrap .cfTitle {
+			font-size: 18px;
+			color: #222222;
+			margin-bottom: 12px;
+		}
+
+		.cfbWrap:hover {
+			transform: translateY(-20px);
+		}
+
+		.cfbWrap .cfbDetail {
+			transition: transform 0.3s ease-out, opacity 0.3s ease 0.5s;
+			transform: translateY(-20px);
+			opacity: 0;
+			visibility: hidden;
+			transition-delay: .25s;
+		}
+
+		.cfbWrap:hover .cfbDetail {
+			transform: translateY(0);
+			opacity: 1;
+			visibility: visible;
+		}
+
+		/* ---------------------------------------------------
+		.joinNowBlock / joinNowBlock
+		----------------------------------------------------- */
+		.joinNowBlock {
+			min-height: 543px;
+		}
+
+		.joinNowBlock .captionHolder {
+			padding: 40px 40px;
+			border-radius: 10px;
+			z-index: 9999;
+		}
+
+		.joinNowBlock .captionHolder p {
+			margin-bottom: 30px;
+		}
+
+		.joinNowBlock .captionHolder .btnTheme {
+			min-width: 190px;
+		}
+
+		/* ---------------------------------------------------
+		.Media Quries / Media Quries
+		----------------------------------------------------- */
+
+		@media(min-width : 576px) {
+
+			h1 , .h1 {
+				font-size: 35px; line-height: 42px;
+			}
+
+			h2, .h2 {
+				font-size: 30px;line-height: 35px;
+			}
+
+			.innerPagesSlider .slick-dots {
+				margin-top: 50px;
+			}
+
+			.innerPagesSlider .slickNext {
+				left: 15px;
+			}
+
+			.innerPagesSlider .slickPrev {
+				right: 15px;
+			}
+
+			.innerPagesSlider .slick-arrow {
+				width: 32px;height: 32px;
+			}
+
+			.uniqueFeatureBlcok .cImgHolder .cImgWrap {
+				width: 405px;
+				margin: 0 auto;
+			}
+
+		}
+
+		@media(min-width : 992px) {
+
+			h1 , .h1 {
+				font-size: 40px; line-height: 52px;
+			}
+
+			h2 , .h2 {
+				font-size: 35px;
+				line-height: 43px;
+			}
+
+			.bannerBlock {
+				min-height:  689px;
+			}
+
+			.bannerBlock .caption p {
+				margin-bottom: 40px;
+			}
+
+			.HomeBlock .imgHolder .btn {
+				min-width: 156px;
+				padding-top: 16px;
+				padding-bottom: 16px;
+			}
+
+			.HomeBlock .imgHolder {
+				margin-bottom: 32px;
+			}
+
+			.innerPagesSlider .slick-dots {
+				margin-top: 25px;
+			}
+
+			.innerPagesSlider .slickNext {
+				left: 25px;
+			}
+
+			.innerPagesSlider .slickPrev {
+				right: 24px;
+			}
+
+			.innerPagesSlider .slick-arrow {
+				width: 40px;height: 40px;
+			}
+
+			.uniqueFeatureBlcok .fullLengthBanner .h2 {
+				font-size: 36px;
+				line-height: 44px;
+			}
+		}
+
+		@media (min-width: 1200px) {
+
+			.container{
+				max-width: 1170px;
+			}
+
+			.HomeBlock .imgHolder .btn{
+				min-width: 176px;
+				padding-top: 16px;
+				padding-bottom: 16px; 
+			}
+
+			.innerPagesSlider .slickNext {
+				left: 72px;
+			}
+
+			.innerPagesSlider .slickPrev {
+				right: 68px;
+			}
+
+			.innerPagesSlider .slick-arrow {
+				width: 46px;height: 46px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<!-- pageWrapper -->
+	<div id="pageWrapper">
+		<main>
+			<!-- bannerBlock -->
+			<section class="bannerBlock d-flex text-center position-relative">
+				<div class="alignCenter w-100 d-flex align-items-center">
+					<div class="container py-15 py-xl-20">
+						<div class="row">
+							<div class="col-12 col-xl-8 offset-xl-2">
+								<div class="caption position-relative">
+									<div class="logo mb-6">
+										<img src="images/landing-pages/logo.png" class="img-fluid" alt="image description">
+									</div>
+									<h1 class="h1 text-capitalize">Muzze - Art Gallery, Museum, Exhibition & Event HTML Template</h1>
+									<p>The Ultimate HTML Template for the Museum & Art Gallery Businesses.</p>
+									<a href="https://themeforest.net/checkout/67001541/review_order" class="btn btnTheme text-capitalize">purchase now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- featureDemoBlock -->
+			<section class="featureDemoBlock text-center bgLight py-15 py-xl-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-8 offset-lg-2">
+							<header class="header mb-12">
+								<h1 class="text-capitalize mb-5">Featured Demos</h1>
+								<p>In the template. We created ready to use websites for various kind of museum, Galleries, Exhibition, Exposition and History businesses as well.</p>
+							</header>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img01.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Default Demo</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img02.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-modern.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Modern Demo</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img03.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-exhibition.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Exhibition Slider</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img04.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-classic.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Classic Demo</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img05.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-creative.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Creative Demo</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img06.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-minimal.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Minimal Demo</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img07.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-fullscreen.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Fullscreen Lock</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img08.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-simple-boxed.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Simple Boxed</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center mb-10">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img09.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-parallax.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Parallax (Exhibition)</h3>
+							</div>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4">
+							<div class="HomeBlock position-relative text-center">
+								<div class="imgHolder w-100 position-relative">
+									<img src="images/landing-pages/img10.jpg" class="img-fluid" alt="image descirption">
+									<div class="btnHolder position-absolute">
+										<a href="home-event.html"  class="btn btnTheme text-capitalize">view demo</a>
+									</div>
+								</div>
+								<h3 class="h6 text-capitalize">Home - Event Demo</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- uniqueFeatureBlcok -->
+			<section class="uniqueFeatureBlcok pb-15 pb-xl-20">
+				<div class="fullLengthBanner text-center mb-15 mb-xl-20">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<h2 class="h2 mb-0 text-capitalize">Meet‘s Muzze Full List Of Unique Features</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Inbuild Exhibitions Manager</h2>
+										<p>Choose between 3 layout styles and show your all exhibits current, past & upcoming with a inbuild exhibitions management system. Create your exhibition with online booking system and Impress your audience, styles and show your all exhibits current, past & upcoming with single detail page options.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img11.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Flexible Event Management System</h2>
+										<p>Providing a professional level quality to your event with attractive 3 event list page.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img12.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Impressive Artworks Showcase</h2>
+										<p>Easily create collections or artworks page using 2 built-in layout options along with customization options for each of them to showcase your works or collections impressively.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img13.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Plan Your Visit &amp; Diffrent Venues</h2>
+										<p>Make feeling your customers visits more easy & convinent using plan your visit page for different locations. The highly UX focused crafted visit us page help to grow your business.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img14.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Online Ticket Booking System</h2>
+										<p>Highly customized online ticket booking system for you next level customers . It will help to easy your business in digital universe.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img16.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">4 Diffrent Image Gallery Types</h2>
+										<p>We have 4 different gallery styles with elegant hover. That helps to show your works in more flexible and attractive. Even you can use filter options to pick exact item easily.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img17.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Artists & Individual Detail Pages</h2>
+										<p>With the help of artists and single artist page layout you can list out your museum or galleries artists with detail page. Single artists page help to show each artist personal info and artworks.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img18.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">3 Stunning Blog Post Layouts</h2>
+										<p>You can use the blog to display news updates, videos or galleries. It has various layouts including classic, grid, minimal and sidebar options.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img19.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol mb-15 mb-md-20">
+							<div class="row align-items-center flex-row-reverse">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Diffrent Header Menu Style</h2>
+										<p>We have diffrent header styles all with boxed & transparent options! that shows your works looks more attractive.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img20.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<article class="col-12 featureCol">
+							<div class="row align-items-center">
+								<div class="col-12 col-md-4">
+									<div class="fContentHolder mb-7 mb-md-0">
+										<h2 class="h2 text-capitalize mb-4">Diffrent Footer Styles</h2>
+										<p>Select from different widget layouts as well as widget and footer colors and combine them with various subfooter layouts to have your own unique ending to your website.</p>
+									</div>
+								</div>
+								<div class="col-12 col-md-8">
+									<div class="cImgHolder text-center">
+										<div class="cImgWrap">
+											<img src="images/landing-pages/img21.jpg" class="img-fluid" alt="images/landing-pages description">
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- innerPagesBlcok -->
+			<section class="innerPagesBlcok text-center bgLight py-15 py-xl-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-8 offset-lg-2">
+							<header class="header mb-12">
+								<h1 class="text-capitalize mb-3">Inner Page Layouts</h1>
+								<p>Muzze comes with many high quality inner pages those are Easily fit for your business.</p>
+							</header>
+						</div>
+					</div>
+				</div>
+				<div class="innerPagesSlider">
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img22.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Membership</h5>
+						</article>
+					</div>
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img23.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Facility Rental</h5>
+						</article>
+					</div>
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img24.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Donate</h5>
+						</article>
+					</div>
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img22.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Membership</h5>
+						</article>
+					</div>
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img23.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Facility Rental</h5>
+						</article>
+					</div>
+					<div class="layoutBlockCol">
+						<article class="layoutBlock text-center">
+							<div class="imgHolder mb-5">
+								<img src="images/landing-pages/img24.jpg" class="img-fluid" alt="image descirption">
+							</div>
+							<h5 class="h6 text-capitalize">Donate</h5>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- coreFeatureBlock -->
+			<section class="coreFeatureBlock text-center pt-15 pt-xl-20">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-8 offset-lg-2">
+							<header class="header mb-12">
+								<h1 class="text-capitalize mb-3">Core Features</h1>
+								<p>The template has built with more amazing features easy to use, some of most important features are listed here.</p>
+							</header>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico01.png" alt="image description">
+								</span>
+								<div class="cfTitle">Responsive</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico02.png" alt="image description">
+								</span>
+								<div class="cfTitle">Retina Ready</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico03.png" alt="image description">
+								</span>
+								<div class="cfTitle">Highly Customizable</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico04.png" alt="image description">
+								</span>
+								<div class="cfTitle">limitless Google Fonts</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico05.png" alt="image description">
+								</span>
+								<div class="cfTitle">Bootstrap 4x</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico06.png" alt="image description">
+								</span>
+								<div class="cfTitle">Powerful Theme Options</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico07.png" alt="image description">
+								</span>
+								<div class="cfTitle">Speed Performance</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico08.png" alt="image description">
+								</span>
+								<div class="cfTitle">Browser compatible</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico09.png" alt="image description">
+								</span>
+								<div class="cfTitle">SEO Optimized</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico10.png" alt="image description">
+								</span>
+								<div class="cfTitle">Detailed Documentation</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico11.png" alt="image description">
+								</span>
+								<div class="cfTitle">5 Star Support</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
+							<article class="cfbWrap mb-8 mb-md-10">
+								<span class="icnHolder d-flex align-items-center justify-content-center">
+									<img src="images/landing-pages/ico12.png" alt="image description">
+								</span>
+								<div class="cfTitle">Automatic Updates</div>
+								<div class="cfbDetail">When we hover this area will come. Please change real content here for each items separately.</div>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- joinNowBlock -->
+			<section class="joinNowBlock bgCover d-flex text-center overlay position-relative" style="background-image: url(images/landing-pages/img25.jpg);">
+				<div class="alignCenter w-100 d-flex align-items-center">
+					<div class="container py-15 py-xl-20">
+						<div class="row">
+							<div class="col-12 col-xl-6 offset-xl-3">
+								<div class="captionHolder bg-white position-relative">
+									<h2 class="h2 mb-2">Buy Now! <br> Start your website today</h2>
+									<p>Lifetime Updates. 5 Star Support.</p>
+									<a href="https://themeforest.net/checkout/67001541/review_order" class="btn btnTheme text-capitalize">join to download</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<!-- include jQuery library -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<!-- include bootstrap popper JavaScript -->
+	<script src="js/popper.min.js"></script>
+	<!-- include bootstrap JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- include custom JavaScript -->
+	<script src="js/jqueryCustom.js"></script>
+</body>
+
+<!-- Mirrored from htmlbeans.com/html/muzze/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Jan 2024 13:50:23 GMT -->
+</html>
